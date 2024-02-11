@@ -7,12 +7,14 @@ const PLACEHOLDER = `conic-gradient(
 
 function HexColor() {
     const [color, setColor] = useState("BADA55");
+
     const onChange = (evt) =>
-    setColor(
-        evt.target.value
-            .replace(/[^0-9a-f]/gi, "")
-            .toUpperCase()
-    );
+        setColor(
+            evt.target.value
+                .replace(/[^0-9a-f]/gi, "")
+                .toUpperCase()
+        );
+
     const outputStyle = {
         width: "20px",
         border: "1px solid",
@@ -20,6 +22,7 @@ function HexColor() {
             ? `#${color}`
             : PLACEHOLDER,
     };
+
     return (
         <form style={{display: "flex"}}>
             <label>
